@@ -21,7 +21,6 @@
         android:text="Yes"
         android:layout_below="@id/deletePopupText"
         android:layout_marginLeft="40dp"
-        android:onClick="deleteTable"
         />
 
     <Button
@@ -31,7 +30,6 @@
         android:text="No"
         android:layout_toRightOf="@id/deleteTableYes"
         android:layout_below="@+id/deletePopupText"
-        android:onClick="removePopup"
         />
 
 

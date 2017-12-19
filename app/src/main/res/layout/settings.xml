@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/backButton"
-            android:onClick="onButtonShowPopupWindowClick"
+            android:onClick="deleteTablePopupClick"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="4dp"
             android:layout_marginTop="@dimen/marginTopUpperRow"

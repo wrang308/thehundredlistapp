@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.marku.thehundredlistapp.settings"
+        <activity android:name="com.example.marku.thehundredlistapp.Settings"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
