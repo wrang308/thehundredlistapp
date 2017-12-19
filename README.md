@@ -1,7 +1,8 @@
 # The hundred list app
 
-This is an application for people that want daily reminders
-Every day a new text will be shown for the user
+This is an application for people that want daily reminders. The adds texts to a database (SQLite) and
+every day a new text from the database will be shown for the user. When It has shown all texts it will loop
+and show the first one again.
 
 # Main features
 
@@ -14,10 +15,11 @@ Every day a new text will be shown for the user
 
 - Add notifications for the app so every day one text form the database
   will be in a notification.
+- Add preloaded daily reminders (Random facts, Bible verses etc.)
 
 # Technology, Libraries
 
- -SQLite - Database for the application
+- SQLite - Database for the application
 
 
 # Author
