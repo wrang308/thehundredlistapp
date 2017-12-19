@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="buttonFontSize">13dp</dimen>
+    <dimen name="marginTopUpperRow">10dp</dimen>
+    <dimen name="marginTopLowerRow">55dp</dimen>
+
+
+</resources>

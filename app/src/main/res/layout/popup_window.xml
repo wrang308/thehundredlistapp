@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete all data?"
+        android:id="@+id/deletePopupText"
+        android:textColor="@color/white"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteTableYes"
+        android:text="Yes"
+        android:layout_below="@id/deletePopupText"
+        android:layout_marginLeft="40dp"
+        android:onClick="deleteTable"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteTableNo"
+        android:text="No"
+        android:layout_toRightOf="@id/deleteTableYes"
+        android:layout_below="@+id/deletePopupText"
+        android:onClick="removePopup"
+        />
+
+
+
+</RelativeLayout>

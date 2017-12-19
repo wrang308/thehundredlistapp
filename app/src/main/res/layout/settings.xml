@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_layout">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <EditText
+            android:id="@+id/textInput"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text=""
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/marginTopUpperRow"
+            android:gravity="center"
+
+            android:text="back"
+            android:textSize="@dimen/buttonFontSize" />
+        <Button
+            android:id="@+id/dropTableButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backButton"
+            android:onClick="onButtonShowPopupWindowClick"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="@dimen/marginTopUpperRow"
+            android:gravity="center"
+
+            android:text="drop Table"
+            android:textSize="@dimen/buttonFontSize" />
+
+        <Button
+            android:id="@+id/dropRowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dropTableButton"
+
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/marginTopUpperRow"
+            android:gravity="center"
+
+            android:text="drop Row"
+            android:textSize="@dimen/buttonFontSize" />
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/marginTopLowerRow"
+            android:gravity="center"
+
+            android:text="Submit"
+            android:textSize="@dimen/buttonFontSize" />
+
+        <Button
+            android:id="@+id/showTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/marginTopLowerRow"
+            android:layout_toRightOf="@+id/submitButton"
+            android:text="View Table"
+            android:textSize="@dimen/buttonFontSize" />
+
+        <Button
+            android:id="@+id/updateTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/marginTopLowerRow"
+            android:layout_toRightOf="@+id/showTable"
+            android:text="Update Row"
+            android:textSize="@dimen/buttonFontSize" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@+id/showTable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Insert below" />
+
+        <EditText
+            android:id="@+id/updateNumberText"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/updateTable"
+            android:ems="10"
+            android:inputType="number" />
+        <TextView
+            android:id="@+id/updateNumberTextDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Row Number"
+            android:textSize="9dp"
+            android:layout_alignTop="@+id/dropRowButton"
+            android:layout_alignRight="@+id/updateNumberText"
+            android:layout_alignEnd="@+id/updateNumberText" />
+
+    </RelativeLayout>
+
+</LinearLayout>
