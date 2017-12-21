@@ -65,7 +65,6 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
                             boolean isInserted = Mydb.insertData(textInput.getText().toString());
                             if (isInserted == true) {
                                 Mydb.updateIds();
-                                getIntent().putExtra("String",getContentStringArr());
                                 Toast.makeText(Settings.this, "Data inserted", Toast.LENGTH_LONG).show();
                             } else
                                 Toast.makeText(Settings.this, "Data not inserted", Toast.LENGTH_LONG).show();
@@ -127,7 +126,6 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
                     if (updateInt >= 0) {
                         boolean isupdate = Mydb.updateData(Integer.toString(updateInt), textInput.getText().toString());
                         if (isupdate == true) {
-                            getIntent().putExtra("String",getContentStringArr());
                             Toast.makeText(Settings.this, "Data is updated", Toast.LENGTH_LONG).show();
                         } else
                             Toast.makeText(Settings.this, "Data is not updated", Toast.LENGTH_LONG).show();
@@ -188,28 +186,6 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
         deleteTable();
     }
 
-    public String getDailyText(){
-
-        String[] mainTextArray = getContentStringArr();
-
-        return mainTextArray[time.getDays()%mainTextArray.length];
-    }
-
-    public String[] getContentStringArr(){
-        Cursor result = Mydb.getAllData();
-        String contentString = "";
-        while(result.moveToNext()){
-            contentString = contentString  + result.getString(1) + "¤";
-        }
-        String[] mainTextArray = ArrayifyString(contentString);
-        return mainTextArray;
-    }
-
-    public String[] ArrayifyString(String string){
-        String[] array;
-        array = string.split("¤");
-        return array;
-    }
 }
 
 

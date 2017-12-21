@@ -1,6 +1,5 @@
 package com.example.marku.thehundredlistapp;
 
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,9 +13,6 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
-/**
- * Created by andrew on 1/21/14.
- */
 public class NotifyService extends BroadcastReceiver {
 
     DataBaseHelper Mydb;
@@ -32,13 +28,6 @@ public class NotifyService extends BroadcastReceiver {
             contentString = contentString  + result.getString(1) + "¤";
         }
         String[] mainTextArray = ArrayifyString(contentString);
-
-
-        String[] arr = intent.getStringArrayExtra("String");
-
-        //String[] arr = ArrayifyString(contentString);
-
-        System.out.println("Arr length " + arr.length);
 
         int MID = 33;
 
