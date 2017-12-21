@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.marku.thehundredlistapp">
 
+    <!-- Permission to use AlarmManager -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +25,10 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
+
+
+        <receiver android:name=".NotifyService"/>
+
     </application>
 
 </manifest>
