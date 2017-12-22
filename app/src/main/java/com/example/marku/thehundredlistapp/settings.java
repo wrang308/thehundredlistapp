@@ -33,7 +33,7 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
         showTableButton = (Button)findViewById(R.id.showTable);
         updateButton = (Button)findViewById(R.id.updateTable);
         Mydb = new DataBaseHelper(this);
-        
+
         settingsBackButton = (Button)findViewById(R.id.backButton);
 
         settingsBackButton.setOnClickListener(new View.OnClickListener() {
