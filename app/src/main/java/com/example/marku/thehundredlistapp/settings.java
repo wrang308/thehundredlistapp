@@ -33,8 +33,7 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
         showTableButton = (Button)findViewById(R.id.showTable);
         updateButton = (Button)findViewById(R.id.updateTable);
         Mydb = new DataBaseHelper(this);
-
-
+        
         settingsBackButton = (Button)findViewById(R.id.backButton);
 
         settingsBackButton.setOnClickListener(new View.OnClickListener() {
@@ -45,12 +44,10 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
             }
         });
 
-
         addData();
         viewAll();
         updateData();
         deleteRow();
-       // deleteTable();
     }
 
     public void addData(){
@@ -71,10 +68,8 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
 
                             textInput.setText("");
                         }
-
                     }
                 }
-
         );
     }
 
@@ -92,7 +87,7 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
                 }
                 StringBuffer buffer = new StringBuffer();
                 while(result.moveToNext()){
-                    buffer.append("ID " + result.getString(0) + "\n");
+                    buffer.append("ROW " + result.getString(0) + "\n");
                     buffer.append(result.getString(1) + "\n");
                 }
 
@@ -121,16 +116,21 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
                     Toast.makeText(Settings.this, "No number. Please insert a number", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    updateInt = Integer.parseInt(updateNumberText.getText().toString());
+                    if (textInput.getText().toString().length() < 1) {
+                        Toast.makeText(Settings.this, "No Text. Please insert text before updating", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        updateInt = Integer.parseInt(updateNumberText.getText().toString());
 
-                    if (updateInt >= 0) {
-                        boolean isupdate = Mydb.updateData(Integer.toString(updateInt), textInput.getText().toString());
-                        if (isupdate == true) {
-                            Toast.makeText(Settings.this, "Data is updated", Toast.LENGTH_LONG).show();
-                        } else
-                            Toast.makeText(Settings.this, "Data is not updated", Toast.LENGTH_LONG).show();
+                        if (updateInt >= 0) {
+                            boolean isupdate = Mydb.updateData(Integer.toString(updateInt), textInput.getText().toString());
+                            if (isupdate == true) {
+                                Toast.makeText(Settings.this, "Data is updated", Toast.LENGTH_LONG).show();
+                            } else
+                                Toast.makeText(Settings.this, "Data is not updated", Toast.LENGTH_LONG).show();
 
-                        updateNumberText.setText("");
+                            updateNumberText.setText("");
+                        }
                     }
                 }
             }
@@ -163,7 +163,6 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
         });
     }
 
-
     public void deleteTable() {
 
         Toast.makeText(Settings.this, "Table deleted", Toast.LENGTH_LONG).show();
@@ -178,7 +177,6 @@ public class Settings extends AppCompatActivity implements DeleteTablePopup.Comm
         deleteTablePopup.show(manager, "deleteTablePopup");
 
     }
-
 
     @Override
     public void onDialogMessage(String message) {
