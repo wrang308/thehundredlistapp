@@ -1,4 +1,4 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

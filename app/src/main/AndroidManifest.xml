@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.marku.thehundredlistapp">
+    package="daily.reminder.marku.thehundredlistapp">
 
     <!-- Permission to use AlarmManager -->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name="daily.reminder.marku.thehundredlistapp.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
 
@@ -24,13 +24,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.marku.thehundredlistapp.Settings"
+        <activity android:name="daily.reminder.marku.thehundredlistapp.Settings"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
 
 
-        <receiver android:name=".NotifyService"/>
+        <receiver android:name="daily.reminder.marku.thehundredlistapp.NotifyService"/>
 
     </application>
 

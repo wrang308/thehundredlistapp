@@ -1,4 +1,4 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 /**
  * Created by marku on 2017-11-18.
@@ -6,7 +6,6 @@ package com.example.marku.thehundredlistapp;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.function.LongToIntFunction;
 
 import static java.lang.StrictMath.toIntExact;
 
@@ -33,9 +32,6 @@ public class time {
         // System.out.printf("%d days, %d hours, %d minutes and %d seconds\n", days, hours, minutes, seconds);
 
         return(toIntExact(days));
-
-
-
 
     }
 }

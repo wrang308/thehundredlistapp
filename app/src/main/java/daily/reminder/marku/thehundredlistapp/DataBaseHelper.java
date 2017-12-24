@@ -1,13 +1,10 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by marku on 2017-11-16.

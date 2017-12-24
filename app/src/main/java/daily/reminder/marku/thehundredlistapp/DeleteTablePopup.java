@@ -1,4 +1,4 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 
 /**
  * Created by marku on 2017-12-19.

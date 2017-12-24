@@ -1,4 +1,4 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.marku.thehundredlistapp;
+package daily.reminder.marku.thehundredlistapp;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,7 +16,6 @@ import android.widget.Toast;
  */
 
 public class Settings extends AppCompatActivity implements DeleteTablePopup.Communicator{
-
 
     DataBaseHelper Mydb;
     EditText textInput, updateNumberText;
