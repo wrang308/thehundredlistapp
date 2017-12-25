@@ -57,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mainText = (TextView)findViewById(R.id.mainText);
+        mainText.setText(getDailyText());
+
+    }
+
     public String getDailyText(){
 
         String[] mainTextArray = getContentStringArr();
