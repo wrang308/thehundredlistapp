@@ -31,7 +31,7 @@ public class time {
 
         // System.out.printf("%d days, %d hours, %d minutes and %d seconds\n", days, hours, minutes, seconds);
 
-        return(toIntExact(days));
+        return((int) days);
 
     }
 }

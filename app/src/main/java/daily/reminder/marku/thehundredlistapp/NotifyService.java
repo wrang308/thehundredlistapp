@@ -9,7 +9,6 @@ import android.database.Cursor;
 import android.support.v4.app.NotificationCompat;
 
 
-
 public class NotifyService extends BroadcastReceiver {
 
     DataBaseHelper Mydb;
@@ -37,7 +36,6 @@ public class NotifyService extends BroadcastReceiver {
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
                 notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
 
         //Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
