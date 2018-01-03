@@ -126,6 +126,44 @@
             android:layout_alignRight="@+id/updateNumberText"
             android:layout_alignEnd="@+id/updateNumberText" />
 
+
+
+        <Button
+            android:id="@+id/addButton1"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@+id/addButton2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Set Random facts"
+            android:textSize="10dp"/>
+
+        <Button
+            android:id="@+id/addButton2"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Set Random facts"
+            android:textSize="10dp"/>
+
+        <Button
+            android:id="@+id/addButton3"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/addButton2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Set Random facts"
+            android:textSize="10dp"/>
+
     </RelativeLayout>
 
 </LinearLayout>

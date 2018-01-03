@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         mPendingIntent = PendingIntent.getService(this, 0, intent, 0);
 
-        // some code for testing. dunno really! 
+        // some code for testing. dunno really!
         //Toast.makeText(this, calendar.get(Calendar.MINUTE) + "    " + calendar.get(Calendar.HOUR), Toast.LENGTH_SHORT).show();
 
         //  * 60 * 60 * 24
