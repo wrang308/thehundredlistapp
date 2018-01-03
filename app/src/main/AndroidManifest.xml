@@ -29,9 +29,9 @@
             android:screenOrientation="portrait">
         </activity>
 
-
-        <receiver android:name="daily.reminder.marku.thehundredlistapp.NotifyService"/>
-
+        <service android:enabled="true" android:name="daily.reminder.marku.thehundredlistapp.NotifyService" />
+        <!--<receiver android:name="daily.reminder.marku.thehundredlistapp.NotifyService"/>
+        -->
     </application>
 
 </manifest>

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton settingsButton;
     TextView mainText;
     DataBaseHelper Mydb;
+    PendingIntent mPendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,11 +91,25 @@ public class MainActivity extends AppCompatActivity {
         calendar.set(Calendar.SECOND, 0);
         System.out.println(calendar.getTime());
 
-        Intent intent1 = new Intent(MainActivity.this, NotifyService.class);
-        intent1.putExtra("String", getContentStringArr());
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0,intent1, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(MainActivity.this.ALARM_SERVICE);
-        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        Intent intent = new Intent(this, NotifyService.class);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        mPendingIntent = PendingIntent.getService(this, 0, intent, 0);
+
+        // some code for testing. dunno really! 
+        //Toast.makeText(this, calendar.get(Calendar.MINUTE) + "    " + calendar.get(Calendar.HOUR), Toast.LENGTH_SHORT).show();
+
+        //  * 60 * 60 * 24
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP , calendar.getTimeInMillis() , 1000 * 60 * 60 * 24 , mPendingIntent);
+
+
+//        Intent intent1 = new Intent(this, NotifyService.class);
+//        intent1.putExtra("String", getContentStringArr());
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0,intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+//        AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(MainActivity.this.ALARM_SERVICE);
+//        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+//
+
     }
 
     public String[] ArrayifyString(String string){
